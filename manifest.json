@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "The Office Quotes - New Tab, New Quotes",
+  "version": "0.0.1",
+  "description": "Start every search with a short script from the office.",
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}
