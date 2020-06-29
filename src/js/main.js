@@ -60,7 +60,34 @@ function parseQuote(response) {
   var quotes = obj[season][episode].slice(start_index, start_index+LENGTH_OF_SCRIPT);
 
   displayQuote(quotes, episode, season);
-  showCharacters(quotes[0].character, quotes[1].character)
+
+  var characters = {}
+  quotes.forEach((quote) => {
+    characters[quote.character] = true
+  })
+
+  var keys = Object.keys(characters)
+  if (keys.length == 2) {
+    showCharacters(keys[0], keys[1])
+  } else if (keys.length == 3) {
+    cleaned_character = ["random", "random"]
+    i = 0
+    if (keys[0].toUpperCase() in CHARACTERS){
+      cleaned_character[i] = keys[0]
+      i++
+    }
+    if (keys[1].toUpperCase() in CHARACTERS) {
+      cleaned_character[i] = keys[1]
+      i++
+    }
+    if (i < cleaned_character.length && keys[2].toUpperCase() in CHARACTERS) {
+      cleaned_character[i] = keys[2]
+    }
+    showCharacters(cleaned_character[0], cleaned_character[1])
+  } else if (keys.length == 1) {
+    showCharacters(keys[0], "random")
+  }
+    
 }
 
 function showCharacters(char1, char2) {
