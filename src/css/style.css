@@ -71,6 +71,29 @@ p {
   font-weight: 300;
 }
 
+.credits {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.credits p,
+.credits a {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+.credits a {
+  text-decoration: underline;
+}
+
+.credits a:hover {
+  opacity: .6;
+  text-decoration: none;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .char1 img, .char2 img {
