@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "The Office Quotes - New Tab, New Quotes",
-  "version": "0.0.2",
-  "description": "Start every search with a short script from the office.",
+  "version": "0.0.3",
+  "description": "Start every search with a short script from the office. Not associated with NBC or NBC’s The Office.",
 
   "chrome_url_overrides" : {
     "newtab": "index.html"
